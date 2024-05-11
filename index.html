@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.css" />
     <link rel="stylesheet" href="library/index.css" />
+    <link rel="stylesheet" href="library/media.css" />
     <link rel="stylesheet" href="library/animations.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -24,21 +27,21 @@
   <body>
     <!-- header/navbar section -->
     <header>
-      <navbar
-        ><div class="container header">
+      <navbar id="home" class=" large-screens-header">
+        <div class="container header">
           <div class="row d-flex justify-content-between align-items-center">
             <div class="col-6">
               <ul class="nav">
                 <li class="nav-item brand">
-                  <a href="#" class="nav-link">Lucky</a>
+                  <a href="index.html" class="nav-link h4">AcoustiKE</a>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Contact Us</a>
+                  <a href="#contact" class="nav-link">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -56,19 +59,56 @@
           </div>
         </div>
       </navbar>
+      <div class="header-mobile container-fluid">
+        <div class="container-fluid bg-light" style="border-radius: 32px;">
+          <div class="row justify-content-between">
+            <div class="col" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+              <i class="bi bi-list" style="font-size: xx-large;"></i>
+            </div>
+            <div class="col text-end my-2">
+              <h1>AcoustiKE</h1>
+            </div>
+          </div>
+        </div>
+        <!-- <button class="btn btn-primary" type="button">Enable body scrolling</button> -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">AcoustiKE</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          </div>
+        </div>
+        
+        <ul class="nav">
+          <li class="nav-item">
+            <div class="a nav-link">Home</div>
+          </li>
+          <li class="nav-item">
+            <div class="a nav-link">Shop</div>
+          </li>
+          <li class="nav-item">
+            <div class="a nav-link">About Us</div>
+          </li>
+          <li class="nav-item">
+            <div class="a nav-link">Contact Us</div>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <div class="container-fluid full-height-container">
-      <div class="containe">
+      <div class="container">
         <h1>AcoustiKE</h1>
         <h4 class="c-1-1">Wireless</h4>
-        <p class="large-text h2">Headphones</p>
+        <p class="large-text h2 typing-animation">Headphones</p>
       </div>
       <img
         src="resources/homehero.png"
         alt="Floating Picture"
-        class="floating-picture"
+        class="floating-picture fade"
       />
+      <div class="get-mobi" style="display: none;">Get it Now</div>
       <div class="container d-flex justify-content-between">
         <div class="get-btn col-md-4">Get Now</div>
         <div class="hero-description col-md-4 px-3 pt-2">
@@ -81,76 +121,313 @@
       </div>
     </div>
 
-    <div class="container-fluid bg-light">
-      <div class="row row-cols-2 row-cols-md-4">
-        <div class="col">
-          <img
-            src="resources/headphones4.png"
-            alt=""
-            class="img-fluid mx-auto d-flex align-self-center"
-            style="height: 20rem; width: 14rem"
-          />
-
-          <div class="h2 text-center">Lorem ipsum.</div>
+    <div class="container-fluid first-container">
+      <div class="container-fluid d-flex">
+        <a href="#home" class="nav-link h5">Home</a>
+        <a href="#" class="nav-link h5 disabled" style="color: #454545 !important;" id="shop">/ Shop</a>
+      </div>
+      <div class="container-fluid">
+        <div class="row row-cols-2 row-cols-md-4">
+          <div class="col">
+            <img
+              src="resources/headphones4.png"
+              alt=""
+              class="img-fluid mx-auto d-flex align-self-center"
+              style="height: 20rem; width: 14rem"
+            />
+  
+          </div>
+          <div class="col">
+            <img
+              src="resources/headphones2.png"
+              alt=""
+              class="img-fluid mx-auto d-flex align-self-center"
+              style="height: 20rem; width: 14rem"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="resources/headphones3.png"
+              alt=""
+              class="img-fluid mx-auto d-flex align-self-center"
+              style="height: 20rem; width: 14rem"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="resources/whiteheadphones.png"
+              alt=""
+              class="img-fluid mx-auto d-flex align-self-center"
+              style="height: 20rem; width: 14rem; filter: drop-shadow(0 0 8px #454545);"
+            />
+          </div>
         </div>
-        <div class="col">
-          <img
-            src="resources/headphones2.png"
-            alt=""
-            class="img-fluid mx-auto d-flex align-self-center"
-            style="height: 20rem; width: 14rem"
-          />
-          <div class="h2 text-center">Lorem, ipsum.</div>
-        </div>
-        <div class="col">
-          <img
-            src="resources/headphones3.png"
-            alt=""
-            class="img-fluid mx-auto d-flex align-self-center"
-            style="height: 20rem; width: 14rem"
-          />
-          <div class="h2 text-center">Lorem, ipsum.</div>
-        </div>
-        <div class="col">
-          <img
-            src="resources/whiteheadphones.png"
-            alt=""
-            class="img-fluid mx-auto d-flex align-self-center"
-            style="height: 20rem; width: 14rem; filter: drop-shadow(0 0 8px #454545);"
-          />
-          <div class="h2 text-center">Lorem, ipsum.</div>
+      </div>
+      <div class="container"">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col px-2 py-2">
+            <div class="row row-cols-1 row-cols-md-2 gx-2 gy-2">
+              <div class="col d-flex align-items-center justify-content-between"">
+                <img src="resources/headphones3.png" alt="" style="height: 21rem; width: 14rem;" class="img-fluid d-flex mx-auto"/>
+              </div>
+              <div class="col d-flex align-items-center">
+                <div class="more-products">
+                  <p>
+                    Immerse in sound, style, and comfort at our headphone haven. Elevate your audio experience with premium picks tailored just for you.
+                  </p>
+                  <button>more products</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row row-cols-1 row-cols-md-2 gx-2 gy-2">
+              <div class="col d-flex align-items-center justify-content-between"">
+                <img src="resources/headphonestand.png" alt="" style="height: 21rem; width: 14rem;" class="img-fluid d-flex mx-auto"/>
+              </div>
+              <div class="col d-flex align-items-center justify-content-between"">
+                <img src="resources/redheadphones.png" alt="" style="height: 20rem; width: 14rem;" class="img-fluid d-flex mx-auto"/>
+              </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container my-3">
+  <div class="container-fluid second-container bg-light">
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-md-4 info">
+        <div class="col"><i class="bi bi-truck"></i>Free Shipping</div>
+        <div class="col"><i class="bi bi-cash"></i>Money Guarantee</div>
+        <div class="col"><i class="bi bi-telephone-inbound"></i></i>Online Support</div>
+        <div class="col"><i class="bi bi-shield-lock"></i>Secure Payment</div>
+      </div>
+    </div>
+    
+    <div class="container my-5 ad-container my-3">
+      <img src="resources/greenheadphone.png" alt="" class="img-fluid ad-picture">
       <div class="row row-cols-1 row-cols-md-2">
-        <div class="col px-2 py-2">
-          <div class="row row-cols-1 row-cols-md-2 gx-2 gy-2">
-            <div class="col d-flex align-items-center justify-content-between"">
-              <img src="resources/headphones3.png" alt="" style="height: 21rem; width: 14rem;" class="img-fluid d-flex mx-auto"/>
-            </div>
-            <div class="col d-flex align-items-center justify-content-between">
-              <p class="d-flex mx-auto align-self-center" style="font-weight: 400; border-left: #5c5c5c 2px solid; padding-left: 8px; text-wrap:balance; color: #5c5c5c;">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores dignissimos assumenda deserunt.
-                Lorem, ipsum dolor sit amet consectetur adipisicing
-              </p>
-            </div>
+        <div class="col">
+          <div class="col" style="font-size:  5rem; padding: 32px; z-index: 2; font-weight: 700; line-height: 70%; color: #ffffff;">
+            <p>Play on your</p>
+            <p>Spotify.</p>
           </div>
         </div>
-        <div class="col">
-          <div class="row row-cols-1 row-cols-md-2 gx-2 gy-2">
-            <div class="col d-flex align-items-center justify-content-between"">
-              <img src="resources/headphonestand.png" alt="" style="height: 21rem; width: 14rem;" class="img-fluid d-flex mx-auto"/>
+        <div class="col" style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: flex-start; padding: 16px; color: #ffffff;">
+          <div class="h6">Unwrap Savings: Exclusive Offers Inside!</div>
+          <p style="font-size: .8rem;">Unlock unbeatable savings with our exclusive offers! Dive into a world of discounts and deals crafted just for you. From limited-time specials to ongoing promotions, discover the perfect offer to elevate your experience!</p>
+          <button class="offers-btn text-center">Get Offer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="third-container container">
+    <div class="row row-cols-1 row-cols-md-4 gx-2">
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style="background-color: white; color: #232323;">
+          <img src="resources/homehero.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h5">JBL headphones</div>
             </div>
-            <div class="col d-flex align-items-center justify-content-between"">
-              <img src="resources/earphones.png" alt="" style="height: 20rem; width: 14rem;" class="img-fluid d-flex mx-auto"/>
+            <div class="card-text muted">Ksh 1899</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style="background-color: white; color: #232323;">
+          <img src="resources/headphones2.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h5">Sonicsurge Pro</div>
             </div>
+            <div class="card-text muted">Ksh 3499</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style="background-color: white; color: #232323;">
+          <img src="resources/headphones3.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h4">BeatMaster Elite</div>
+            </div>
+            <div class="card-text muted">Ksh 4199</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style=" background-color: white; color: #000;">
+          <img src="resources/headphones4.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h4">AudioBliss Aura</div>
+            </div>
+            <div class="card-text muted">Ksh 3799</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style=" background-color: white; color: #000;">
+          <img src="resources/airpods.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h4">Airpods Pro</div>
+            </div>
+            <div class="card-text muted">Ksh 6799</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style=" background-color: white; color: #000;">
+          <img src="resources/bluegset.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h4">Bassblast Pro</div>
+            </div>
+            <div class="card-text muted">Ksh 3799</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style=" background-color: white; color: #000;">
+          <img src="resources/lightbluegset.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h4">TechTune Titan</div>
+            </div>
+            <div class="card-text muted">Ksh 2799</div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex my-2">
+        <div class="card mx-auto" style=" background-color: white; color: #000;">
+          <img src="resources/boxedheadset.png" alt="" class="img-fluid img-cap" style="height: 18rem; width: 16rem;">
+          <div class="card-body">
+            <div class="card-title">
+              <div class="h4">Acoustiwave zenith</div>
+            </div>
+            <div class="card-text muted">Ksh 8799</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
+
+      
+  <div class="container my-5 ad-container my-3" style="background-color: #5b7c5c !important;">
+    <img src="resources/greensmartwach.png" alt="" class="img-fluid ad-picture-2">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col">
+        <div class="col" style="font-size:  5rem; padding: 32px; z-index: 2; font-weight: 700; line-height: 70%; color: #ffffff;">
+          <p>Smart</p>
+          <p>Devices.</p>
+        </div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: flex-start; padding: 16px; color: #ffffff;">
+        <div class="h6">Unwrap Savings: Exclusive Offers Inside!</div>
+        <p style="font-size: .8rem;">Unlock unbeatable savings with our exclusive offers! Dive into a world of discounts and deals crafted just for you. From limited-time specials to ongoing promotions, discover the perfect offer to elevate your experience!</p>
+        <button class="offers-btn text-center">Get Offer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col">
+        <div class="card d-flex" style="object-fit: cover;">
+          <img src="resources/illustrationg.png" alt="" class="img-fluid img-cap mx-auto" style="height: 16rem;">
+          <div class="card-body" style="background-color: white;">
+            <div class="card-title">Smart watches.</div>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus repudian.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card d-flex" style=" object-fit: cover;">
+          <img src="resources/mac.png" alt="" class="img-fluid img-cap mx-auto" style="height: 16rem;">
+          <div class="card-body">
+            <div class="card-title">Laptop accessories</div>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, harum!</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card d-flex" style=" object-fit: cover;">
+          <img src="resources/headphones2.png" alt="" class="img-fluid img-cap mx-auto" style="height: 16rem;">
+          <div class="card-body">
+            <div class="card-title">Laptop accessories</div>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, harum!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background: linear-gradient(to left, rgb(168, 168, 168), white);">
+    <div class="row row-cols-1 row-cols-md-4 d-flex">
+      <div class="col-md-3 mx-auto d-flex">
+        <img src="resources/spotify.png" alt="" class="img-fluid mx-auto" style="height: 14rem; width: 16rem;">
+      </div>
+      <div class="col-md-3 mx-auto d-flex">
+        <img src="resources/spotifypodcasters.png" alt="" class="img-fluid mx-auto" style="height: 14rem; width: 16rem;">
+      </div>
+      <div class="col-md-3 mx-auto d-flex">
+        <img src="resources/boomplay.png" alt="" class="img-fluid mx-auto" style="height: 14rem; width: 16rem;">
+      </div>
+      <div class="col-md-3 mx-auto d-flex">
+        <img src="resources/applemusic.png" alt="" class="img-fluid mx-auto" style="height: 14rem; width: 16rem;">
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <footer>
+      <div class="container footer" id="contact">
+        <div class="row row-cols-1 row-cols-md-4 d-flex">
+          <div class="col mx-auto d-flex">
+            <div class="col">
+              <h5>AcoustiKE</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fugiat est adipisci omnis aspernatur deserunt officia, excepturi dolore atque dicta!</p>
+              <div class="row">
+                <div class="col"><i class="bi bi-whatsapp mx-3"></i></div>
+                <div class="col"><i class="bi bi-facebook mx-3"></i></div>
+                <div class="col"><i class="bi bi-instagram mx-3"></i></div>
+                <div class="col"><i class="bi bi-twitter mx-3"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h5>Quick Links:</h5>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="" class="nav-link">Shop</a>
+            <a href="" class="nav-link">About Us</a>
+            <a href="" class="nav-link">Contact Us</a>
+          </div>
+          <div class="col">
+            <div class="h5">contact</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repudiandae temporibus voluptates, optio neque rem! Animi voluptatem laboriosam ducimus quae.
+            </p>
+          </div>
+          <div class="col">
+            <div class="h5">lorem</div>
+            <div class="h4">For Latest News & Updates</div>
+            <button class="text-center" style="border-radius: 32px;height: 40px; width: 150px; background-color: #454545; border: none; color: #ffffff; text-align: center;">News & updates</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+
+    <script type="module" src="scripts/index.js"></script>
+    <script src="https://kit.fontawesome.com/7d83ebedd1.js" crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
